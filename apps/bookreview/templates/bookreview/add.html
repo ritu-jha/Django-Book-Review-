@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Add A Book Review</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+	<a href="/dashboard">Home</a> | <a href="/logout">Logout</a>
+		<h1>Add a new book title and a review</h1>
+		<form action="/add_review" method="post">
+			{%csrf_token%}
+			Book title: <input type="text" name="title" required>
+			<br><br>
+			Add a new author: <input type="text" name="author" required>
+			<br><br>
+			Review: <textarea name="review" id="" cols="30" rows="10" required></textarea>
+			<br><br>
+			Rating: <select name="rating" id="" required>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+			<br><br>
+			<input type="submit" value="Add book and review">
+		</form>
+
+
+	</div>
+	
+</body>
+</html>
